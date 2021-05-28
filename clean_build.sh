@@ -1,0 +1,1 @@
+./premake5 gmake && cd build && make config=release_x64 clean && make config=release_x64 && cd ../

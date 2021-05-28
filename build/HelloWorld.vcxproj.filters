@@ -1,0 +1,237 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="events">
+      <UniqueIdentifier>{5A9D08FC-463F-33D2-2FFA-46261B3BBA22}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resources">
+      <UniqueIdentifier>{98664f45-c0e0-4ae7-af54-0cc509bdcd2b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="String">
+      <UniqueIdentifier>{b2dc0ac7-b923-46e2-ac6b-a5f370bda627}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting">
+      <UniqueIdentifier>{ad862814-8c80-4c6e-a369-7a159dd77e50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\entity">
+      <UniqueIdentifier>{bfb2dba7-89bf-4067-8774-985f495ad79d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\arguments">
+      <UniqueIdentifier>{d171fe9a-6155-4efc-bf4f-f97570d98d6c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\events">
+      <UniqueIdentifier>{d9190ce2-12c6-473d-aea5-22b0e94ae473}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\newArguments">
+      <UniqueIdentifier>{2c1625d3-4832-424d-9933-911112d964c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\timer">
+      <UniqueIdentifier>{7ae54509-c079-4d1c-95ef-9531fb15f904}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="scripting\commands">
+      <UniqueIdentifier>{81d121a1-412b-44ac-a1bb-639f008d0802}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\helloworld\events\PlayerEvents.hpp">
+      <Filter>events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\events\VehicleEvents.hpp">
+      <Filter>events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\json.hpp" />
+    <ClInclude Include="..\helloworld\RaluCore.hpp" />
+    <ClInclude Include="..\helloworld\events\EntityEvents.hpp">
+      <Filter>events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\events\ColshapeEvents.hpp">
+      <Filter>events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\events\TickEvents.hpp">
+      <Filter>events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\events\CheckpointEvents.h">
+      <Filter>events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\Utility.hpp" />
+    <ClInclude Include="..\helloworld\ResourceManager.hpp">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\Resource.hpp">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\String.hpp">
+      <Filter>String</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\ScriptFile.hpp">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\LuaVM.hpp">
+      <Filter>Resources</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\Events.hpp">
+      <Filter>events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\EventHandler.hpp">
+      <Filter>events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCEntity.hpp">
+      <Filter>scripting\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCVector3.hpp">
+      <Filter>scripting\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCCheckpoint.hpp">
+      <Filter>scripting\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCPlayer.hpp">
+      <Filter>scripting\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\ScriptArgument.hpp">
+      <Filter>scripting\arguments</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\ScriptArguments.hpp">
+      <Filter>scripting\arguments</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCVehicle.hpp">
+      <Filter>scripting\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCBlip.hpp">
+      <Filter>scripting\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCMarker.hpp">
+      <Filter>scripting\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCArgument.hpp">
+      <Filter>scripting\newArguments</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCColshape.hpp">
+      <Filter>scripting\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCObject.hpp">
+      <Filter>scripting\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCEvents.hpp">
+      <Filter>scripting\events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\Timer.hpp">
+      <Filter>scripting\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\TimerManager.hpp">
+      <Filter>scripting\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCTimer.hpp">
+      <Filter>scripting\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCALL.hpp">
+      <Filter>scripting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\CommandManager.hpp">
+      <Filter>scripting\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\Command.hpp">
+      <Filter>scripting\commands</Filter>
+    </ClInclude>
+    <ClInclude Include="..\helloworld\NCCommand.hpp">
+      <Filter>scripting\commands</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\helloworld\events\PlayerEvents.cpp">
+      <Filter>events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\events\VehicleEvents.cpp">
+      <Filter>events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\main.cpp" />
+    <ClCompile Include="..\helloworld\RaluCore.cpp" />
+    <ClCompile Include="..\helloworld\events\EntityEvents.cpp">
+      <Filter>events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\events\ColshapeEvents.cpp">
+      <Filter>events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\events\TickEvents.cpp">
+      <Filter>events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\events\CheckpointEvents.cpp">
+      <Filter>events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\Utility.cpp" />
+    <ClCompile Include="..\helloworld\ResourceManager.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\Resource.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\String.cpp">
+      <Filter>String</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\ScriptFile.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\LuaVM.cpp">
+      <Filter>Resources</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\Events.cpp">
+      <Filter>events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCEntity.cpp">
+      <Filter>scripting\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCVector3.cpp">
+      <Filter>scripting\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCCheckpoint.cpp">
+      <Filter>scripting\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCPlayer.cpp">
+      <Filter>scripting\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\ScriptArgument.cpp">
+      <Filter>scripting\arguments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\ScriptArguments.cpp">
+      <Filter>scripting\arguments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCVehicle.cpp">
+      <Filter>scripting\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCBlip.cpp">
+      <Filter>scripting\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCMarker.cpp">
+      <Filter>scripting\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCArgument.cpp">
+      <Filter>scripting\newArguments</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCColshape.cpp">
+      <Filter>scripting\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCObject.cpp">
+      <Filter>scripting\entity</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCEvents.cpp">
+      <Filter>scripting\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\Timer.cpp">
+      <Filter>scripting\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\TimerManager.cpp">
+      <Filter>scripting\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCTimer.cpp">
+      <Filter>scripting\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\CommandManager.cpp">
+      <Filter>scripting\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\Command.cpp">
+      <Filter>scripting\commands</Filter>
+    </ClCompile>
+    <ClCompile Include="..\helloworld\NCCommand.cpp">
+      <Filter>scripting\commands</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

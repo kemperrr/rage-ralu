@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{4179687C-2D31-AAC9-9638-8325820F45BA}</ProjectGuid>
+    <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>HelloWorld</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>..\..\plugins\</OutDir>
+    <IntDir>obj\x64\Debug\</IntDir>
+    <TargetName>ralu</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>..\..\plugins\</OutDir>
+    <IntDir>obj\x64\Release\</IntDir>
+    <TargetName>ralu</TargetName>
+    <TargetExt>.dll</TargetExt>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\inc;..\inc\LuaBridge;..\sdk;..\helloworld\;..\helloworld\events;..\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\..\plugins\helloworld.lib</ImportLibrary>
+      <AdditionalDependencies>lua51.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\inc;..\inc\LuaBridge;..\sdk;..\helloworld\;..\helloworld\events;..\lua;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Full</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <StringPooling>true</StringPooling>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>..\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\..\plugins\helloworld.lib</ImportLibrary>
+      <AdditionalDependencies>lua51.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\helloworld\Command.hpp" />
+    <ClInclude Include="..\helloworld\CommandManager.hpp" />
+    <ClInclude Include="..\helloworld\EventHandler.hpp" />
+    <ClInclude Include="..\helloworld\Events.hpp" />
+    <ClInclude Include="..\helloworld\events\CheckpointEvents.h" />
+    <ClInclude Include="..\helloworld\events\ColshapeEvents.hpp" />
+    <ClInclude Include="..\helloworld\events\EntityEvents.hpp" />
+    <ClInclude Include="..\helloworld\events\PlayerEvents.hpp" />
+    <ClInclude Include="..\helloworld\events\TickEvents.hpp" />
+    <ClInclude Include="..\helloworld\events\VehicleEvents.hpp" />
+    <ClInclude Include="..\helloworld\json.hpp" />
+    <ClInclude Include="..\helloworld\LuaVM.hpp" />
+    <ClInclude Include="..\helloworld\NCALL.hpp" />
+    <ClInclude Include="..\helloworld\NCArgument.hpp" />
+    <ClInclude Include="..\helloworld\NCBlip.hpp" />
+    <ClInclude Include="..\helloworld\NCCheckpoint.hpp" />
+    <ClInclude Include="..\helloworld\NCColshape.hpp" />
+    <ClInclude Include="..\helloworld\NCCommand.hpp" />
+    <ClInclude Include="..\helloworld\NCEntity.hpp" />
+    <ClInclude Include="..\helloworld\NCEvents.hpp" />
+    <ClInclude Include="..\helloworld\NCMarker.hpp" />
+    <ClInclude Include="..\helloworld\NCObject.hpp" />
+    <ClInclude Include="..\helloworld\NCPlayer.hpp" />
+    <ClInclude Include="..\helloworld\NCTimer.hpp" />
+    <ClInclude Include="..\helloworld\NCVector3.hpp" />
+    <ClInclude Include="..\helloworld\NCVehicle.hpp" />
+    <ClInclude Include="..\helloworld\RaluCore.hpp" />
+    <ClInclude Include="..\helloworld\Resource.hpp" />
+    <ClInclude Include="..\helloworld\ResourceManager.hpp" />
+    <ClInclude Include="..\helloworld\ScriptArgument.hpp" />
+    <ClInclude Include="..\helloworld\ScriptArguments.hpp" />
+    <ClInclude Include="..\helloworld\ScriptFile.hpp" />
+    <ClInclude Include="..\helloworld\String.hpp" />
+    <ClInclude Include="..\helloworld\Timer.hpp" />
+    <ClInclude Include="..\helloworld\TimerManager.hpp" />
+    <ClInclude Include="..\helloworld\Utility.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\helloworld\Command.cpp" />
+    <ClCompile Include="..\helloworld\CommandManager.cpp" />
+    <ClCompile Include="..\helloworld\Events.cpp" />
+    <ClCompile Include="..\helloworld\events\CheckpointEvents.cpp" />
+    <ClCompile Include="..\helloworld\events\ColshapeEvents.cpp" />
+    <ClCompile Include="..\helloworld\events\EntityEvents.cpp" />
+    <ClCompile Include="..\helloworld\events\PlayerEvents.cpp" />
+    <ClCompile Include="..\helloworld\events\TickEvents.cpp" />
+    <ClCompile Include="..\helloworld\events\VehicleEvents.cpp" />
+    <ClCompile Include="..\helloworld\LuaVM.cpp" />
+    <ClCompile Include="..\helloworld\main.cpp" />
+    <ClCompile Include="..\helloworld\NCArgument.cpp" />
+    <ClCompile Include="..\helloworld\NCBlip.cpp" />
+    <ClCompile Include="..\helloworld\NCCheckpoint.cpp" />
+    <ClCompile Include="..\helloworld\NCColshape.cpp" />
+    <ClCompile Include="..\helloworld\NCCommand.cpp" />
+    <ClCompile Include="..\helloworld\NCEntity.cpp" />
+    <ClCompile Include="..\helloworld\NCEvents.cpp" />
+    <ClCompile Include="..\helloworld\NCMarker.cpp" />
+    <ClCompile Include="..\helloworld\NCObject.cpp" />
+    <ClCompile Include="..\helloworld\NCPlayer.cpp" />
+    <ClCompile Include="..\helloworld\NCTimer.cpp" />
+    <ClCompile Include="..\helloworld\NCVector3.cpp" />
+    <ClCompile Include="..\helloworld\NCVehicle.cpp" />
+    <ClCompile Include="..\helloworld\RaluCore.cpp" />
+    <ClCompile Include="..\helloworld\Resource.cpp" />
+    <ClCompile Include="..\helloworld\ResourceManager.cpp" />
+    <ClCompile Include="..\helloworld\ScriptArgument.cpp" />
+    <ClCompile Include="..\helloworld\ScriptArguments.cpp" />
+    <ClCompile Include="..\helloworld\ScriptFile.cpp" />
+    <ClCompile Include="..\helloworld\String.cpp" />
+    <ClCompile Include="..\helloworld\Timer.cpp" />
+    <ClCompile Include="..\helloworld\TimerManager.cpp" />
+    <ClCompile Include="..\helloworld\Utility.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
